@@ -1,0 +1,106 @@
+/* Reset */
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f5f7fa;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: white;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar li {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+}
+
+/* Left */
+.left h1 {
+    margin: 5px 0;
+    font-size: 35px;
+}
+
+.left span {
+    color: orange;
+}
+
+.left p {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+/* Simple typing animation (CSS only) */
+.typing {
+    border-right: 3px solid black;
+    width: 220px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(20), blink 0.5s infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 220px }
+}
+
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+/* Button */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: blue;
+    color: white;
+    cursor: pointer;
+}
+
+/* Icons */
+.icons {
+    margin-top: 20px;
+}
+
+.icons i {
+    margin-right: 10px;
+    padding: 10px;
+    background: black;
+    color: white;
+    border-radius: 50%;
+}
+
+/* Image */
+.right img {
+    width: 250px;
+    border-radius: 50%;
+}
+
+/* Responsive */
+@media(max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .right {
+        margin-top: 30px;
+    }
+}

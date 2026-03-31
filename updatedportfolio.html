@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <h2>Jigar</h2>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Skills</li>
+        <li>Contact</li>
+    </ul>
+</div>
+
+<!-- Hero Section -->
+<div class="hero">
+
+    <!-- LEFT -->
+    <div class="left">
+        <h1>Hi There,</h1>
+        <h1>I'm Jigar <span>Sable</span></h1>
+
+        <p>I am <span id="typing"></span></p>
+
+        <button>About Me</button>
+
+        <!-- Social Icons -->
+        <div class="icons">
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-github"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+        <img src="https://i.imgur.com/4Z7bG6g.png">
+    </div>
+
+</div>
+
+<!-- Typing Script -->
+<script>
+let words = ["Web Developer", "Designer", "Freelancer"];
+let i = 0;
+let j = 0;
+let current = "";
+let isDeleting = false;
+
+function type() {
+    current = words[i];
+
+    if (isDeleting) {
+        document.getElementById("typing").innerHTML = current.substring(0, j--);
+    } else {
+        document.getElementById("typing").innerHTML = current.substring(0, j++);
+    }
+
+    if (!isDeleting && j == current.length) {
+        isDeleting = true;
+        setTimeout(type, 1000);
+    } else if (isDeleting && j == 0) {
+        isDeleting = false;
+        i = (i + 1) % words.length;
+        setTimeout(type, 200);
+    } else {
+        setTimeout(type, isDeleting ? 50 : 100);
+    }
+}
+
+type();
+</script>
+
+</body>
+</html>

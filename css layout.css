@@ -1,0 +1,25 @@
+section div{
+    padding: 30px;
+    margin: 150px;
+    height: 100px;
+    background-color: blue;
+    font-size: 50px;
+    color: yellow;
+}
+section {
+    height: 4000px;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between center flex-start space-around;
+    align-items: flex-end;
+    gap: 300p;
+}
+section div:nth-child(1){
+    background-color: brown;
+
+}
+section div:hover{
+    background-color: black;
+}

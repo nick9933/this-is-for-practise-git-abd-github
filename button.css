@@ -1,0 +1,31 @@
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: blue;
+    color: white;
+    cursor: pointer;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 10%;
+    min-height: 80vh;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #2506ad;
+    color: white; 
+    border-radius: 30px;
+    border: none;
+    text-decoration: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 60px;
+}
+.btn.hover{
+    background:#4c4cff;
+}

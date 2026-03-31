@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Khaja Ghar | Hotel & Restaurant</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+body{
+    scroll-behavior:smooth;
+}
+header{
+    background:#8b0000;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    position:sticky;
+    top:0;
+}
+header h2{
+    font-size:24px;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-weight:bold;
+}
+nav a:hover{
+    text-decoration:underline;
+}
+.hero{
+    height:90vh;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb");
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding-top:200px;
+}
+.hero h1{
+    font-size:50px;
+}
+.hero p{
+    font-size:20px;
+    margin:20px 0;
+}
+.hero button{
+    padding:12px 30px;
+    font-size:18px;
+    background:gold;
+    border:none;
+    cursor:pointer;
+}
+section{
+    padding:60px 40px;
+    text-align:center;
+}
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+.card{
+    border:1px solid #ccc;
+    padding:25px;
+    width:250px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+ul{
+    list-style:none;
+    font-size:18px;
+}
+ul li{
+    margin:10px 0;
+}
+form{
+    max-width:400px;
+    margin:auto;
+}
+form input, form button{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+}
+form button{
+    background:#8b0000;
+    color:white;
+    border:none;
+    font-size:16px;
+    cursor:pointer;
+}
+iframe{
+    width:100%;
+    height:300px;
+    border:none;
+    margin-top:20px;
+}
+footer{
+    background:#222;
+    color:white;
+    padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>🍽️ Khaja Ghar</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#menu">Menu</a>
+        <a href="#booking">Booking</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <h1>Welcome to Khaja Ghar</h1>
+    <p>Traditional Nepali Food & Comfortable Stay</p>
+    <button onclick="goBooking()">Book Now</button>
+</section>
+
+<section id="about">
+    <h2>About Khaja Ghar</h2>
+    <p>
+        Khaja Ghar offers authentic Nepali cuisine with warm hospitality.
+        Enjoy delicious meals, peaceful rooms, and a homely environment.
+    </p>
+</section>
+
+<section id="rooms">
+    <h2>Our Rooms</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Standard Room</h3>
+            <p>Rs. 2000 / night</p>
+        </div>
+        <div class="card">
+            <h3>Deluxe Room</h3>
+            <p>Rs. 3500 / night</p>
+        </div>
+        <div class="card">
+            <h3>Family Room</h3>
+            <p>Rs. 5000 / night</p>
+        </div>
+    </div>
+</section>
+
+<section id="menu">
+    <h2>Our Menu</h2>
+    <ul>
+        <li>🍛 Dal Bhat Set – Rs. 350</li>
+        <li>🥟 Buff / Chicken Momo – Rs. 250</li>
+        <li>🍜 Chowmein – Rs. 180</li>
+        <li>🥘 Thakali Khaja Set – Rs. 550</li>
+        <li>☕ Masala Tea – Rs. 50</li>
+    </ul>
+</section>
+
+<section id="booking">
+    <h2>Online Booking</h2>
+    <form onsubmit="bookHotel(event)">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="date" required>
+        <input type="number" placeholder="Guests" required>
+        <button type="submit">Confirm Booking</button>
+    </form>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>📍 Kathmandu, Nepal</p>
+    <p>📞 +977-98XXXXXXXX</p>
+    <p>✉️ khajaghar@gmail.com</p>
+
+    <iframe 
+        src="https://maps.google.com/maps?q=kathmandu&t=&z=13&ie=UTF8&iwloc=&output=embed">
+    </iframe>
+</section>
+
+<footer>
+    <p>© 2026 Khaja Ghar | All Rights Reserved</p>
+</footer>
+
+<script>
+function goBooking(){
+    document.getElementById("booking").scrollIntoView({behavior:"smooth"});
+}
+function bookHotel(e){
+    e.preventDefault();
+    alert("Thank you! Your booking request has been submitted.");
+}
+</script>
+
+</body>
+</html>
