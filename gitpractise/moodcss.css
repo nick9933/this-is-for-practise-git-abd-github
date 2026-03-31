@@ -19,3 +19,53 @@ body {
     margin-top: 15px;
     border-radius: 10px;
 }
+/* Toggle button */
+#toggle {
+    display: none;
+}
+
+.switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: white;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* DARK MODE DEFAULT */
+body {
+    background: linear-gradient(135deg, #1e3a8a, #9333ea);
+    /* Wrap everything */
+.wrapper {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3a8a, #9333ea);
+    transition: 0.5s;
+}
+
+/* Light mode */
+#toggle:checked ~ .wrapper {
+    background: #f1f5f9;
+    color: black;
+}
+
+#toggle:checked ~ .wrapper .box {
+    background: rgba(0,0,0,0.1);
+}
+    transition: 0.5s;
+}
+
+/* LIGHT MODE WHEN CLICKED */
+#toggle:checked ~ .container {
+    color: black;
+}
+
+#toggle:checked ~ .container .box {
+    background: rgba(0,0,0,0.1);
+}
+
+#toggle:checked ~ body {
+    background: #f1f5f9;
+}
