@@ -1,0 +1,25 @@
+.A {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    clip-path: circle(50%);
+    transition: clip-path 0.5s ease-in-out;
+}
+
+
+.A:hover{
+   
+    clip-path: circle(10px at center);
+}
+.B {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    clip-path: circle(50%);
+    transition: clip-path 0.5s step-end;
+}
+
+.B:hover{
+   
+    clip-path: circle(10px at center);
+}
