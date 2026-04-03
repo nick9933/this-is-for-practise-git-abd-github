@@ -87,11 +87,11 @@ button {
     border-radius: 50%;
 }
 
-/* Image */
+/* Image
 .right img {
     width: 250px;
-    border-radius: 50%;
-}
+    /* border-radius: 50%; */
+} */
 
 /* Responsive */
 @media(max-width: 900px) {
@@ -103,4 +103,16 @@ button {
     .right {
         margin-top: 30px;
     }
+}
+.B {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    clip-path: circle(50%);
+    transition: clip-path 0.5s step-end;
+}
+
+.B:hover{
+   
+    clip-path: circle(10px at center);
 }
